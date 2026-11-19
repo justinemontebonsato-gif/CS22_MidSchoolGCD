@@ -42,6 +42,16 @@ int get_Prime_Factors(int num, int factors[])
 
 	while (num > 1)
 	{
+		// 12 / 2 = 6
+		// 6 / 2 = 3
+		// 3 / 2 = not 0
+		// 3 / 3 = 1
+		// 2 2 3... count = 3
+
+		// 8 / 2 = 4
+		// 4 / 2 = 2
+		// 2 / 2 = 1
+		// 2 2 2... count = 3
 		if (num % divisor == 0)
 		{
 			factors[count] = divisor;
@@ -60,12 +70,14 @@ int find_GCD(int mFactors[], int mCount, int nFactors[], int nCount)
 
 	while (i < mCount && j < nCount)
 	{
+		// if naay common
 		if (mFactors[i] == nFactors[j])
 		{
 			gcd = gcd * mFactors[i];
 			i++;
 			j++;
 		}
+		// if lahi
 		else if (mFactors[i] < nFactors[j])
 			i++;
 		else
