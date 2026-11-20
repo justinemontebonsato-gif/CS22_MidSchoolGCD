@@ -44,7 +44,7 @@ int get_Prime_Factors(int num, int factors[])
 	{
 		// 12 / 2 = 6
 		// 6 / 2 = 3
-		// 3 / 2 = not 0
+		// 3 / 2 = with r
 		// 3 / 3 = 1
 		// 2 2 3... count = 3
 
